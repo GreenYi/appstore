@@ -1,0 +1,26 @@
+networks:
+    1panel-network:
+        external: true
+services:
+  bili-sync-rs:
+    image: amtoaer/bili-sync-rs:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    # 该选项请仅在日志终端支持彩色输出时启用，否则日志中可能会出现乱码
+    tty: true
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:12345"
+    volumes:
+      - "${DATA_PATH}:/app/.config/bili-sync"
+      # metadata/people 正确挂载才能在 Emby 或 Jellyfin 中显示 UP 主头像
+      # 右边的目标目录不固定，只需要确保目标目录与 bili-sync 中填写的“UP 主头像保存路径”保持一致即可
+      - "${DATA_METADATA_PATH}:/app/media/metadata/people"
+      # 接下来可以挂载一系列用于保存视频的目录，接着在 bili-sync 中配置将视频下载到这些目录即可
+      - "${DATA_VIDEO_PATH}:/app/media/video"
+    # 如果你使用的是群晖系统，请移除最后的 logging 配置，否则会导致日志不显示
+    logging:
+      driver: "local"
+    labels:
+      createdBy: "Apps"

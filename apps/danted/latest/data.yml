@@ -1,0 +1,23 @@
+additionalProperties:
+  formFields:
+    - default: 2020
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: SOCKS5 Port
+      labelZh: SOCKS5 代理端口
+      required: true
+      type: number
+    - default: admin
+      edit: true
+      envKey: USERNAME
+      labelEn: Proxy Username
+      labelZh: 代理用户名
+      required: true
+      type: text
+    - default: admin
+      edit: true
+      envKey: PASSWORD
+      labelEn: Proxy Password
+      labelZh: 代理密码
+      required: true
+      type: text

@@ -1,0 +1,21 @@
+name: bili-sync
+tags:
+  - 工具
+  - 视频
+title: 由 Rust 驱动的哔哩哔哩同步工具
+description: bili-sync 是一款专为 NAS 用户编写的哔哩哔哩同步工具。
+additionalProperties:
+  key: bili-sync
+  name: bili-sync
+  tags:
+    - Tool
+    - Video
+  shortDescZh: bili-sync 是一款专为 NAS 用户编写的哔哩哔哩同步工具。
+  shortDescEn: Bili-sync is a Bilibili synchronization tool specifically designed for NAS users.
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://bili-sync.amto.cc/
+  github: https://github.com/amtoaer/bili-sync
+  document: https://bili-sync.amto.cc/quick-start

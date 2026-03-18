@@ -1,0 +1,21 @@
+name: danted
+tags:
+  - 工具
+  - 网络
+title: Dante SOCKS5 代理服务器
+description: 一个轻量级、高性能的 SOCKS5 代理服务器，支持多用户认证。
+additionalProperties:
+  key: danted
+  name: danted
+  tags:
+    - Tool
+    - Network
+  shortDescZh: 高性能 SOCKS5 代理服务器。
+  shortDescEn: High-performance SOCKS5 proxy server.
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  recommend: 0
+  website: https://github.com/Lozy/danted
+  github: https://github.com/Lozy/danted
+  document: https://github.com/Lozy/danted/blob/master/README.md

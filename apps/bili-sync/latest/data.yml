@@ -1,0 +1,30 @@
+additionalProperties:
+  formFields:
+    - default: 12345
+      edit: true
+      envKey: PANEL_APP_PORT_HTTP
+      labelEn: Web UI Port
+      labelZh: Web 界面端口
+      required: true
+      type: number
+    - default: ./config
+      edit: true
+      envKey: DATA_PATH
+      labelEn: Config folder path
+      labelZh: 数据文件夹路径
+      required: true
+      type: text
+    - default: ./config/metadata/people
+      edit: true
+      envKey: DATA_METADATA_PATH
+      labelEn: Metadata people path
+      labelZh: 元数据头像的路径
+      required: true
+      type: text
+    - default: ./config/video
+      edit: true
+      envKey: DATA_VIDEO_PATH
+      labelEn: Saving video path
+      labelZh: 保存视频的路径
+      required: true
+      type: text

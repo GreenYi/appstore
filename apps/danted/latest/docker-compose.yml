@@ -1,0 +1,16 @@
+networks:
+    1panel-network:
+        external: true
+services:
+  danted:
+    image: lozyme/sockd:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    ports:
+      - "${PANEL_APP_PORT_HTTP}:2020"
+    environment:
+      # 格式为 USERNAME:PASSWORD，多个用户可以用逗号隔开
+      - WORKERS=10
+      - USERNAME=${USERNAME}:${PASSWORD}
+    labels:
+      createdBy: "Apps"
